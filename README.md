@@ -1,7 +1,15 @@
+# Important
+Fork was made for following reasons:
+* Optimize docker image size
+* Add customization for my env
+* Add docker-compose and description how to deploy image in my env
+
+Below updated the original readme.
+
 Overview
 ========
 
-Docker image for Openhab (1.8.3). Included is JRE 1.8.45.
+Docker image for Openhab (1.8.3). Based on the official JRE 8 image.
 
 
 Official DEMO Included
@@ -16,7 +24,9 @@ PULL
 Building
 ========
 
-```docker build -t <username>/openhab .```
+```
+docker build --rm --pull --tag=dmitriy/openhab .
+```
 
 Running
 =======
