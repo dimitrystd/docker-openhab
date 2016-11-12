@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  openhab:
+    image: dmitriy/openhab
+    volumes:
+      - /var/openhab/configurations/:/etc/openhab
+      - /var/openhab/addons/:/opt/openhab/addons:ro
+      - /var/openhab/habmin/webapps/habmin/:/opt/openhab/webapps/habmin:ro
+      - /var/openhab/habmin/addons/:/opt/openhab/addons-available/habmin:ro
+      - /var/log/openhab/:/opt/openhab/logs
+    ports:
+      - 8080:8080
+      - 9001:9001
+      # Megadevice binding
+      - 8585:8585
